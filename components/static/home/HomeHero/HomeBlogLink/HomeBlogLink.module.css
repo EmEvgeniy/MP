@@ -1,0 +1,36 @@
+.HomeBlogLink {
+	width: 310px;
+	height: 150px;
+	background: #10434f;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+.HomeBlogLink:hover {
+	transform: scale(1.05, 1.05);
+}
+.inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	color: #fff;
+}
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 20px;
+}
+.text p {
+	font-size: 16px;
+}
+.text div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}

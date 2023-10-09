@@ -1,0 +1,77 @@
+.HomeAdvantagesContent {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 50px;
+}
+.top {
+	width: 100%;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	max-width: 800px;
+	min-height: 120px;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+.num {
+	font-family: "Inter", sans-serif;
+	font-size: 64px;
+	font-weight: 800;
+}
+.title {
+	font-size: 20px;
+	font-weight: 600;
+}
+.bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	gap: 40px;
+	color: #fff;
+}
+.card2 {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: center;
+	gap: 20px;
+	background: #10434f;
+	width: 300px;
+	height: 210px;
+	padding: 40px 20px;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+.card2:hover {
+	transform: scale(1.05, 1.05);
+}
+.num2 {
+	position: absolute;
+	font-family: "Inter", sans-serif;
+	font-size: 30px;
+	top: 20px;
+	left: 20px;
+	font-weight: 900;
+	color: rgba(255, 255, 255, 0.5);
+}
+.card2 img {
+	width: 70px;
+	height: 70px;
+}
+.text {
+	font-size: 18px;
+	text-align: center;
+}

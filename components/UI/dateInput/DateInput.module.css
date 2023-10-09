@@ -1,0 +1,28 @@
+.DateInput {
+	border-radius: 5px;
+background: #FFF;
+box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.15);
+	padding: 15px 20px;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+}
+.DateInput input {
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	background: transparent;
+}
+.icon {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+.icon:hover {
+	color: #37af24;
+}

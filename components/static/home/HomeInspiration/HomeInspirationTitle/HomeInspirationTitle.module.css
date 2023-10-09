@@ -1,0 +1,28 @@
+.HomeInspirationTitle {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 20px;
+	max-width: 300px;
+}
+.title {
+	font-size: 24px;
+	user-select: none;
+}
+.text {
+	font-size: 18px;
+	user-select: none;
+}
+.btn {
+	border-radius: 5px;
+	background: #10434f;
+	padding: 10px 20px;
+	color: #fff;
+	transition: all 0.25s ease;
+	user-select: none;
+	cursor: pointer;
+}
+.btn:hover {
+	transform: scale(1.05, 1.05);
+}

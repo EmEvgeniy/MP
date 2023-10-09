@@ -1,0 +1,16 @@
+.Nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	font-weight: 500;
+	color: inherit;
+}
+.Nav a {
+	border-bottom: 2px solid transparent;
+	padding: 10px 0;
+	transition: all 0.35s ease;
+}
+.Nav a:hover {
+	border-bottom: 2px solid inherit;
+}

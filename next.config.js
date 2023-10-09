@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+	images: {
+		domains: ["api.minzifatravel.ru"],
+		remotePatterns: [
+			{
+				protocol: "http",
+				hostname: "api.minzifatravel.ru",
+				port: "",
+				pathname: "/media",
+			},
+		],
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,0 +1,13 @@
+.SocialLinks{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	gap: 20px;
+	padding: 10px 0;
+	color: #fff;
+}
+.icon{
+	width: 30px;
+	height: 30px;
+}

@@ -1,0 +1,143 @@
+.HomePopularToursContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 50px;
+	width: 100%;
+}
+.btn {
+	border-radius: 5px;
+	background: #10434f;
+	padding: 10px 20px;
+	color: #fff;
+	font-weight: 500;
+	transition: all 0.25s ease;
+}
+.btn:hover {
+	transform: scale(1.05, 1.05);
+}
+.inner {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	width: 100%;
+	align-items: center;
+	justify-items: center;
+	gap: 20px;
+}
+.card {
+	width: 300px;
+	height: 400px;
+	position: relative;
+	z-index: 2;
+}
+.card::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+.top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.heart {
+	cursor: pointer;
+}
+.icon {
+	width: 25px;
+	height: 25px;
+	color: #fff;
+}
+.rating {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	color: #fff;
+	font-weight: 500;
+}
+.img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	color: #fff;
+	padding: 10px;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+.bottom.active {
+	background: rgba(0, 0, 0, 0.648);
+}
+.bottom_top {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 10px;
+}
+.city {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+.country {
+	font-size: 16px;
+}
+.bottom_top_inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.bottom_bottom_inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.bottom_bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 10px;
+	visibility: hidden;
+	height: 0;
+	transition: all 0.25s ease;
+}
+.bottom_bottom.active {
+	visibility: visible;
+	height: 60px;
+}
+.desc {
+	font-size: 16px;
+	width: 100%;
+}
+.days {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-size: 16px;
+}

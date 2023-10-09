@@ -1,0 +1,77 @@
+.inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+}
+.fake {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	padding: 40px 0;
+}
+.MainCitiesContent {
+	width: 100%;
+}
+
+.card {
+	position: relative;
+	width: 310px;
+	height: 250px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	color: #fff;
+	cursor: pointer;
+	gap: 10px;
+}
+.inner a {
+	transition: all 0.25s ease;
+	overflow: hidden;
+}
+.inner a:hover {
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 1);
+}
+.inner a:hover .card::before {
+	backdrop-filter: blur(5px);
+	transition: all 0.25s ease;
+}
+.inner a:hover .img {
+	transform: scale(1.2, 1.2);
+}
+.inner a:hover .title {
+	transform: scale(1.4, 1.4);
+}
+.card::before {
+	content: "";
+	position: absolute;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0000000c 100%);
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+}
+.title {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: 600;
+	transition: all 0.25s ease;
+}
+
+.img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.25s ease;
+}

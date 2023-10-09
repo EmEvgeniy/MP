@@ -1,0 +1,19 @@
+.Links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	color: inherit;
+	transition: all 0.25s ease;
+}
+.Links a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	padding: 7px;
+	border-radius: 5px;
+}
+.Links a:hover {
+	background-color: #10434f;
+}
