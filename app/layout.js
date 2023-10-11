@@ -2,6 +2,7 @@ import TankStackProvider from "@/components/wrappers/TankStackProvider/TankStack
 import "./globals.css";
 import MainWrapp from "@/components/wrappers/mainWrap/MainWrapp";
 import { Montserrat } from "next/font/google";
+import Head from "next/head";
 
 const montserrat = Montserrat({
 	subsets: ["latin"],
@@ -13,9 +14,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-	
 	return (
 		<html lang='en'>
+			<Head>
+				<meta name='viewport' content='width=device-width' />
+			</Head>
 			<body className={montserrat.className}>
 				<TankStackProvider>
 					<MainWrapp>{children}</MainWrapp>
