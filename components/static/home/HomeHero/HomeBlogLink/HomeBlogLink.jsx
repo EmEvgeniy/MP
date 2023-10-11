@@ -7,7 +7,6 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { motion } from "framer-motion";
 
 const en = "More";
 const ru = "Больше";
@@ -33,17 +32,12 @@ export default function HomeBlogLink() {
 			: setFetchLang("en") & setBtn(en);
 	}, [lang]);
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			key={lang}
-			transition={{ delay: 0.5, duration: 0.5 }}
+		<div
 			className={classes.HomeBlogLink}>
 			{isSuccess && (
 				<div className={classes.inner}>
 					<div className={classes.text}>
-						<p>{cities.title}</p>
+						<p>{cities[0].title}</p>
 						<div>
 							<Link href={`/blog/${cities[0]?.id}`}>{btn}</Link>
 							<HiArrowNarrowRight />
@@ -66,6 +60,6 @@ export default function HomeBlogLink() {
 					</div>
 				</div>
 			)}
-		</motion.div>
+		</div>
 	);
 }

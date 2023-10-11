@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import HomeAdvantages from "@/components/static/home/HomeAdvantages/HomeAdvantages";
 import HomeHero from "@/components/static/home/HomeHero/HomeHero";
 import HomeInspiration from "@/components/static/home/HomeInspiration/HomeInspiration";
 import HomePopularTours from "@/components/static/home/HomePopularTours/HomePopularTours";
@@ -11,6 +10,9 @@ const HomeCities = dynamic(() =>
 );
 const HomeTrustBlog = dynamic(() =>
 	import("@/components/static/home/HomeTrustBlog/HomeTrustBlog")
+);
+const HomeAdvantages = dynamic(() =>
+	import("@/components/static/home/HomeAdvantages/HomeAdvantages")
 );
 
 export default function Home() {
