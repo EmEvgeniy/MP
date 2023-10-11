@@ -1,0 +1,9 @@
+{
+	"nav": {
+		"list": [
+			{ "title": "Путешествия", "link": "trip" },
+			{ "title": "Организаторы", "link": "tour_organizers" },
+			{ "title": "Помощь", "link": "help" }
+		]
+	}
+}

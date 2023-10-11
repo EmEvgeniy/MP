@@ -239,22 +239,12 @@ export default function HomePopularToursContent() {
 	const [active2, setActive2] = useState(null);
 	const lang = useStore((state) => state.lang);
 	const [title, setTitle] = useState("");
-	const [data, setData] = useState([]);
-	const [fetchLang, setFetchLang] = useState("en");
-	const { isSuccess } = useQuery({
-		queryKey: ["countriesList", fetchLang],
-		queryFn: async () => {
-			const { data } = await axios.get(
-				`https://api.turi-uzbekistana.ru/api/v1/tours`
-			);
-			setData(data);
-		},
-	});
-	console.log(data);
+
+
 	useEffect(() => {
 		lang === "RU"
-			? setList(ru) & setTitle(ruTitle) & setFetchLang("ru")
-			: setList(en) & setTitle(enTitle) & setFetchLang("en");
+			? setList(ru) & setTitle(ruTitle) 
+			: setList(en) & setTitle(enTitle) 
 	}, [lang]);
 	return (
 		<motion.div

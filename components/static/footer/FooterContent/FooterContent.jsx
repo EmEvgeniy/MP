@@ -109,7 +109,6 @@ export default function FooterContent() {
 					))}
 				</div>
 			</div>
-
 			<div className={classes.bottom}>
 				<p className={classes.rights}>
 					@ 2023 Minzifatravel. All rights reserved

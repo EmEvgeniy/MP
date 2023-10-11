@@ -1,19 +1,22 @@
 "use client";
 import Container from "@/components/wrappers/container/Container";
 import classes from "./Header.module.css";
-import Logo from "@/components/UI/logo/Logo";
 import { useEffect, useState } from "react";
-import Nav from "@/components/UI/nav/Nav";
 import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
+
 const Links = dynamic(() => import("@/components/UI/links/Links"), {
 	ssr: false,
 });
-const Burger = dynamic(() => import("@/components/UI/burger/Burger"), {
-	ssr: false,
-});
+const Nav = dynamic(() => import("@/components/UI/nav/Nav"));
+const Logo = dynamic(() => import("@/components/UI/logo/Logo"));
+const Burger = dynamic(() => import("@/components/UI/burger/Burger"));
 
 export default function Header() {
 	const [active, setActive] = useState(false);
+	const [active2, setActive2] = useState(false);
+	const pathName = usePathname();
+
 	useEffect(() => {
 		const scrollWin = () => {
 			if (window.scrollY > 100) {
@@ -24,10 +27,25 @@ export default function Header() {
 		};
 		document.addEventListener("scroll", scrollWin);
 	});
+
+	useEffect(() => {
+		if (pathName !== "/") {
+			setActive(true);
+			setActive2(true);
+		} else {
+			setActive(false);
+			setActive2(false);
+		}
+	}, [pathName]);
+
 	return (
 		<header
 			className={
-				active ? `${classes.Header} ${classes.active}` : `${classes.Header}`
+				active & !active2
+					? `${classes.Header} ${classes.active}`
+					: active2
+					? `${classes.Header} ${classes.active2}`
+					: `${classes.Header}`
 			}>
 			<Container>
 				<div className={classes.inner}>

@@ -1,0 +1,9 @@
+{
+	"nav": {
+		"list": [
+			{ "title": "Trips", "link": "trips" },
+			{ "title": "Tour organizers", "link": "tour_organizers" },
+			{ "title": "Help", "link": "help" }
+		]
+	}
+}

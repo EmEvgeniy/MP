@@ -2,7 +2,6 @@
 import { useStore } from "@/store/store";
 import classes from "./Langs.module.css";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 
 export default function Langs() {
 	const lang = useStore((state) => state.lang);

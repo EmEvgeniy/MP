@@ -23,9 +23,10 @@ export default function HomeBlogLink() {
 			const { data } = await axios.get(
 				`https://api.minzifatravel.ru/v1/blogs?locale=${fetchLang}&page=1&size=50`
 			);
-			setCities(data.items[0]);
+			setCities(data.items);
 		},
 	});
+
 	useEffect(() => {
 		lang === "RU"
 			? setFetchLang("ru") & setBtn(ru)
@@ -44,18 +45,24 @@ export default function HomeBlogLink() {
 					<div className={classes.text}>
 						<p>{cities.title}</p>
 						<div>
-							<Link href={`/blog/${cities.id}`}>{btn}</Link>
+							<Link href={`/blog/${cities[0]?.id}`}>{btn}</Link>
 							<HiArrowNarrowRight />
 						</div>
 					</div>
 					<div>
-						<Image
-							src={cities.media[0]?.media_url ? cities.media[0]?.media_url : ""}
-							alt='photo'
-							width={150}
-							height={100}
-							priority
-						/>
+						{cities[0]?.media[0]?.media_url && (
+							<Image
+								src={
+									cities[0]?.media[0]?.media_url
+										? cities[0]?.media[0]?.media_url
+										: ""
+								}
+								alt='photo'
+								width={150}
+								height={100}
+								priority
+							/>
+						)}
 					</div>
 				</div>
 			)}
